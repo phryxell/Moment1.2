@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="se">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ab924046e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    <header>
+
+        <img src="https://studenter.miun.se/~phno1900/images/me.png" alt="Animated look-a-like" style="width:94px;height:122px;">
+        <span><strong>ASP.NET med C# - Moment 1</strong></span>
+
+        @{ 
+            var dateTime = DateTime.Now;
+            var dateValue = dateTime.ToString("yyyy/MM/dd");
+        }
+
+    <div class="date"><strong>Dagens datum är:</strong> @dateValue</div>
+
+    </header>
+    <main>
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="/">
+                        <span class="icon">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">
+                            Startsida
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/About">
+                        <span class="icon">
+                            <i class="far fa-address-card" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">
+                            Om mig
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Razor">
+                        <span class="icon">
+                            <i class="fab fa-microsoft" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">
+                            Razor
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
+    <footer id="footer">
+        <p>Av: Philip Nordström - Kontakta mig via e-post <a href="mailto:phno1900@student.miun.se">phno1900@@student.miun.se</a></p>
+    </footer>
+    <script src="~/js/main.js"></script>
+</body>
+</html>

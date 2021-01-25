@@ -1,0 +1,303 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1.2em;
+    background: rgb(220,204,255);
+    background: linear-gradient(0deg, rgba(220,204,255,1) 0%, rgba(255,255,255,1) 67%);
+}
+
+header {
+    min-height: 149px;
+    background: #442b48;
+    color:#ffffff;
+}
+
+img {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.date{
+    position:absolute;
+    top:10px;
+    right:20px;
+    font-size:18px;
+    color:#ffffff;
+}
+
+h1 {
+    text-transform: uppercase;
+    background: #3e0748;
+    color: #ffffff;
+    padding: 12px;
+    margin-bottom: 16px;
+    font-family: 'Yusei Magic', sans-serif;
+    letter-spacing:2px;
+    width:100%;
+}
+
+.contentPage {
+    margin-left: 340px;
+    padding: 12px;
+}
+
+.navigation {
+    position:fixed;
+    top:150px;
+    left:20px;
+    width: 60px;
+    height:100%;
+    background: #3e0748;
+    transition: 0.5s;
+    overflow:hidden;
+}
+
+.navigation:hover,
+.navigation.active {
+    width:300px;
+}
+
+.navigation ul{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    color:#ffffff;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style:none;
+}
+
+.navigation ul li:hover {
+     background: #ea1d63;
+    }
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display:flex;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width:60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fa,
+.navigation ul li a .icon .far,
+.navigation ul li a .icon .fab {
+    font-size: 24px;
+    }
+
+.navigation ul li a .title {
+     position: relative;
+     display: block;
+     padding: 0 10px;
+     height: 60px;
+     line-height: 60px;
+     text-align: start;
+     white-space: nowrap;
+    }
+
+.toggle {
+    position:absolute;
+    top: 175px;
+    right: 40px;
+    width: 60px;
+    height:60px;
+    background: #330748;
+    border:1px solid #ffffff;
+    cursor: pointer;
+}
+
+.toggle:hover,
+.toggle:active{
+    background: #ea1d63;
+}
+
+.toggle:before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position:absolute;
+    width: 100%;
+    height:100%;
+    line-height:60px;
+    text-align: center;
+    font-size:24px;
+    color:#ffffff;
+}
+
+.toggle.active:before{
+    content: '\f00d';
+}
+
+main{
+    margin-bottom:2em;
+}
+
+#footer {
+    background:#ffffff;
+    font-weight:600;
+    width:100%;
+    text-align:center;
+    height:40px;
+    padding:8px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+    #footer a {
+        text-decoration: none;
+        color: #3f37c9;
+    }
+    #footer a:hover {
+        opacity:.5;
+    }
+
+/*--- RAZOR PAGE---*/
+
+.contentPage >*{
+    padding-bottom:20px;
+}
+.contentPage h2 {
+    padding-top: 20px;
+    color: #330748;
+}
+.courseList ul{
+    margin-left:5px; 
+    list-style: none;
+}
+.courseList ul li::before {
+    content: "✅";
+    display: inline-block;
+    margin-right: 0.2rem;
+}
+.courseList ul li {
+    padding-bottom:6px;
+}
+.courseList ul li:last-child {
+    margin-bottom:1em;
+}
+.underLine{
+    border-bottom:1px solid #000000;
+}
+
+/*--- INDEX ---*/
+
+.bgPage {
+    background-image: url("https://studenter.miun.se/~phno1900/images/background.png");
+    height:400px;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+.styledP{
+    padding-top:15px;
+    font-weight:600;
+}
+
+
+/*--- ABOUT ---*/
+.card {
+    max-width: 320px;
+    margin-bottom: 16px;
+    padding: 15px;
+    background: #ffffff;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin: 8px;
+    border-radius:8px;
+}
+img{
+    width:100%;
+}
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after {
+     content: "";
+     display: table;
+    }
+
+.cardTitle {
+    color: #3e0748;
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    text-decoration:none;
+    padding: 16px;
+    color: #ffffff;
+    font-weight:600;
+    letter-spacing:2px;
+    background-color: #3e0748;
+    border-radius:8px;
+    text-align: center;
+    cursor: pointer;
+    margin:18px 0;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color:#3e0748;
+    border:3px solid #3e0748;
+}
+
+/*--- RESPONSIVE ---*/
+
+@media (max-width: 925px)
+{
+    .navigation{
+        left:-60px;
+    }
+    .navigation.active {
+        left: 0;
+        width: 100%;
+    }
+
+    .contentPage {
+        margin: 0 auto;
+        padding: 12px;
+    }
+
+    .bgPage{
+        background-position:center;
+        min-height:300px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    #footer{
+        height:60px;
+    }
+}
